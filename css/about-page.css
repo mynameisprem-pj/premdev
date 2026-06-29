@@ -1,0 +1,228 @@
+/* =====================================================
+   ABOUT PAGE STYLES (about.html)
+   Calm dark navy background throughout, no pure white.
+   Intro: logo left / text right
+   Skills & Tools: scrolling icon marquees
+   GitHub stats: transparent cards blended into bg
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4ead8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+.section-tag {
+  color: #e8a849;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.section-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 40px 40px;
+  text-align: center;
+}
+
+.section-inner h2 {
+  color: #1b2a4a;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* ===================== INTRO: logo left / text right ===================== */
+#about-intro {
+  padding-top: 140px;
+  padding-bottom: 90px;
+  background: linear-gradient(180deg, #1b2a4a 0%, #1b2a4a 40%, #f4ead8 100%);
+}
+
+.intro-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.intro-image {
+  flex: 0 0 220px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 28px;
+  background: rgba(241, 228, 195, 0.04);
+  padding: 20px;
+  filter: drop-shadow(0 10px 30px rgba(217, 98, 43, 0.2));
+}
+
+.intro-text-block {
+  flex: 1;
+  text-align: left;
+}
+
+.intro-text-block h1 {
+  color: #f1e4c3;
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin: 8px 0 22px;
+}
+
+.intro-text {
+  color: #c9bfa3;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  max-width: 520px;
+}
+
+/* ===================== MARQUEE (Skills & Tools) ===================== */
+#skills {
+  background: #f4ead8;
+  padding-bottom: 30px;
+}
+
+#tools {
+  background: #ece0c8;
+  padding-bottom: 80px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0 50px;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scrollLeft 28s linear infinite;
+}
+
+.marquee-reverse .marquee-track {
+  animation: scrollRight 28s linear infinite;
+}
+
+.marquee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  min-width: 90px;
+}
+
+.marquee-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
+}
+
+.marquee-item:hover img {
+  transform: translateY(-6px) scale(1.08);
+}
+
+.marquee-item span {
+  color: rgba(27, 42, 74, 0.7);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+@keyframes scrollLeft {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollRight {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+/* ===================== GITHUB STATS ===================== */
+#github-stats {
+  background: #ece0c8;
+  padding-bottom: 100px;
+}
+
+.stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.stats-img {
+  border-radius: 14px;
+  max-width: 100%;
+  flex: 1 1 440px;
+  background: rgba(27, 42, 74, 0.03);
+  padding: 6px;
+}
+
+.stats-img-wide {
+  flex: 1 1 100%;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .section-inner {
+    padding: 60px 24px 30px;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .intro-image {
+    flex: 0 0 auto;
+  }
+
+  .intro-image img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .intro-text-block {
+    text-align: center;
+  }
+
+  .intro-text-block h1 {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .marquee-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .stats-img {
+    flex: 1 1 100%;
+  }
+}

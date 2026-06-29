@@ -1,0 +1,141 @@
+/* =====================================================
+   NAVBAR STYLES
+   Fixed top navigation, transparent over hero, solid on scroll
+===================================================== */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 48px;
+  background: transparent;
+  z-index: 999;
+  transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+}
+
+#navbar.scrolled {
+  background: rgba(13, 20, 32, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.nav-logo { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+} 
+
+.nav-logo img { 
+    width: 38px; 
+    height: 38px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+}
+
+
+.nav-logo span {
+  color: #f1e4c3;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-logo .dot {
+  color: #d9622b;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f1e4c3;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #d9622b;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #e8a849;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger toggle, hidden on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 2px;
+  background: #f1e4c3;
+  border-radius: 2px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .nav-links {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(13, 20, 32, 0.97);
+  backdrop-filter: blur(12px);
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0 32px;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.nav-links.open {
+  max-height: 400px;
+  padding: 70px 32px 32px;
+  gap: 28px;
+}
+
+.nav-close {
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-size: 2rem;
+  color: #f1e4c3;
+  cursor: pointer;
+  line-height: 1;
+}
+
+  .nav-toggle {
+    display: flex;
+  }
+}

@@ -1,0 +1,133 @@
+/* =====================================================
+   SPLASH SCREEN STYLES
+   Palette pulled from the "Chills and Thrills" logo,
+   muted down for a calm, professional feel:
+   - Deep navy   #1b2a4a
+   - Burnt orange #d9622b
+   - Warm gold   #e8a849
+   - Cream       #f1e4c3
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+#splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, #06090f 0%, #070e1d 60%, #010a1b 100%);
+  z-index: 9999;
+  overflow: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* soft glow behind the logo, echoes the "moon" in the artwork */
+.splash-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(241, 228, 195, 0.18) 0%, rgba(241, 228, 195, 0) 70%);
+  border-radius: 50%;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50%      { transform: scale(1.1); opacity: 1; }
+}
+
+.splash-content {
+  position: relative;
+  text-align: center;
+  z-index: 2;
+}
+
+.splash-logo {
+  width: 160px;
+  height: auto;
+  opacity: 0;
+  animation: fadeInDown 1s ease forwards;
+  filter: drop-shadow(0 0 25px rgba(217, 98, 43, 0.35));
+  border-radius: 24px;   /* add this line — fully circular */
+}
+
+.splash-name {
+  margin-top: 25px;
+  font-size: 2.6rem;
+  letter-spacing: 4px;
+  color: #f1e4c3;
+}
+
+.splash-name .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterIn 0.5s ease forwards;
+}
+
+/* stagger each letter */
+.splash-name .letter:nth-child(1)  { animation-delay: 0.6s; }
+.splash-name .letter:nth-child(2)  { animation-delay: 0.68s; }
+.splash-name .letter:nth-child(3)  { animation-delay: 0.76s; }
+.splash-name .letter:nth-child(4)  { animation-delay: 0.84s; }
+.splash-name .letter:nth-child(5)  { animation-delay: 0.92s; }
+.splash-name .letter:nth-child(6)  { animation-delay: 1s; }
+.splash-name .letter:nth-child(7)  { animation-delay: 1.08s; }
+.splash-name .letter:nth-child(8)  { animation-delay: 1.16s; }
+
+.splash-tagline {
+  margin-top: 12px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: #d9622b;
+  font-family: 'Courier New', monospace;
+}
+
+.cursor {
+  display: inline-block;
+  color: #e8a849;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* fade the whole splash out */
+#splash-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes letterIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* hide main content until splash is gone, avoids layout flash */
+#main-content {
+  display: none;
+}

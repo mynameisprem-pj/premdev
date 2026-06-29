@@ -1,0 +1,280 @@
+/* =====================================================
+   PROJECTS, CONTACT & FOOTER STYLES (index.html)
+   Same calm dark palette as the rest of the site
+===================================================== */
+
+.section-tag {
+  color: #e8a849;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.section-subtitle {
+  color: rgba(27, 42, 74, 0.65);
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* ===================== PROJECTS ===================== */
+#projects .section-tag {
+  color: #d9622b;
+}
+
+#projects {
+  background: #f6f1e4;
+  padding: 100px 40px;
+}
+
+#projects .section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#projects h2 {
+  color: #1b2a4a;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.project-card {
+  background: rgba(27, 42, 74, 0.04);
+  border: 1px solid rgba(27, 42, 74, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #d9622b;
+}
+
+.project-image img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.project-info {
+  padding: 22px;
+}
+
+.project-info h3 {
+  color: #1b2a4a;
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: rgba(27, 42, 74, 0.65);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.project-tech span {
+  background: rgba(217, 98, 43, 0.12);
+  color: #a8451f;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-links .btn-secondary {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: #1b2a4a;
+  border: 1px solid rgba(27, 42, 74, 0.3);
+  background: transparent;
+}
+
+.project-links .btn-secondary:hover {
+  background: rgba(27, 42, 74, 0.06);
+  border-color: #d9622b;
+  color: #d9622b;
+}
+
+/* ===================== CONTACT ===================== */
+#contact {
+  background: #e6d5c3;
+  padding: 100px 40px;
+  text-align: center;
+}
+
+#contact .section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  color: #1b2a4a;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.contact-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  margin-top: 50px;
+  text-align: left;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1b2a4a;
+  font-size: 1rem;
+}
+
+.contact-item i {
+  font-size: 1.3rem;
+  color: #d9622b;
+}
+
+.contact-item a {
+  color: #1b2a4a;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease;
+}
+
+.contact-item a:hover {
+  border-color: #d9622b;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  width: fit-content;
+  background: #25D366;
+  color: #07260f;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 14px 30px;
+  border-radius: 50px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-btn img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.3);
+}
+
+.contact-social {
+  display: flex;
+  gap: 22px;
+  flex: 0 0 auto;
+}
+
+.contact-social a {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(27, 42, 74, 0.05);
+  border: 1px solid rgba(27, 42, 74, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.contact-social a img {
+  width: 26px;
+  height: 26px;
+}
+
+.contact-social a:hover {
+  transform: translateY(-5px);
+  border-color: #e8a849;
+  background: rgba(27, 42, 74, 0.08);
+}
+
+/* ===================== FOOTER ===================== */
+#footer {
+  background: #0e1626;
+  padding: 26px 20px;
+  text-align: center;
+}
+
+#footer p {
+  color: #8a8578;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-columns {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+
+  .contact-social {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  #projects,
+  #contact {
+    padding: 70px 24px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
