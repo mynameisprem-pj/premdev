@@ -2,7 +2,7 @@
 
 A personal portfolio website built from scratch with HTML, CSS, and vanilla JavaScript — featuring an animated splash screen, a responsive navbar, and sections for hero, about, skills, tools, projects, and contact.
 
-🔗 **Live site:** [mynameisprem-pj.github.io/prem-portfolio](https://mynameisprem-pj.github.io/prem-portfolio)
+🔗 **Live site:** [mynameisprem-pj.vercel.app](https://mynameisprem-pj.vercel.app)
 
 ## Features
 
