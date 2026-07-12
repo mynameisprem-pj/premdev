@@ -53,6 +53,7 @@
   border-radius: 14px;
   overflow: hidden;
   box-shadow: 0 6px 20px rgba(27, 42, 74, 0.06);
+  cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
@@ -120,6 +121,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: white-space 0s;
+}
+
+.project-info p.expanded {
+  white-space: normal;
+  text-overflow: unset;
 }
 
 .project-tech {
