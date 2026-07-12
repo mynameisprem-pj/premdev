@@ -48,68 +48,106 @@
 }
 
 .project-card {
-  background: rgba(27, 42, 74, 0.04);
-  border: 1px solid rgba(27, 42, 74, 0.1);
-  border-radius: 16px;
+  background: #ffffff;
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 6px 20px rgba(27, 42, 74, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: #d9622b;
+  box-shadow: 0 16px 32px rgba(27, 42, 74, 0.12);
+}
+
+/* mock browser chrome above the screenshot for a polished "preview" feel */
+.project-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 12px;
+  background: #eae2d0;
+  border-bottom: 1px solid rgba(27, 42, 74, 0.08);
+}
+
+.project-browser-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(27, 42, 74, 0.18);
+}
+
+.project-browser-bar span:nth-child(1) { background: #e8756a; }
+.project-browser-bar span:nth-child(2) { background: #e8c14f; }
+.project-browser-bar span:nth-child(3) { background: #6fbf73; }
+
+.project-image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #eae2d0;
 }
 
 .project-image img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   object-fit: cover;
+  object-position: top;
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.04);
 }
 
 .project-info {
-  padding: 22px;
+  padding: 18px 20px 20px;
 }
 
 .project-info h3 {
   color: #1b2a4a;
-  font-size: 1.15rem;
-  margin-bottom: 10px;
+  font-size: 1.05rem;
+  margin-bottom: 6px;
 }
 
 .project-info p {
-  color: rgba(27, 42, 74, 0.65);
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  color: rgba(27, 42, 74, 0.6);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
+  gap: 6px;
+  margin-bottom: 14px;
 }
 
 .project-tech span {
-  background: rgba(217, 98, 43, 0.12);
+  background: rgba(217, 98, 43, 0.1);
   color: #a8451f;
-  font-size: 0.75rem;
-  padding: 4px 10px;
+  font-size: 0.7rem;
+  padding: 3px 9px;
   border-radius: 20px;
   letter-spacing: 0.3px;
 }
 
 .project-links {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
 .project-links .btn-secondary {
-  padding: 8px 16px;
-  font-size: 0.85rem;
+  padding: 7px 14px;
+  font-size: 0.8rem;
   color: #1b2a4a;
-  border: 1px solid rgba(27, 42, 74, 0.3);
+  border: 1px solid rgba(27, 42, 74, 0.25);
   background: transparent;
 }
 
