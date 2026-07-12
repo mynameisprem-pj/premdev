@@ -15,25 +15,9 @@
   <link rel="stylesheet" href="css/about.css" />
   <link rel="stylesheet" href="css/sections.css" />
   <link rel="stylesheet" href="css/skills-tools.css" />
+  <link rel="stylesheet" href="css/effects.css" />
 </head>
 <body>
-
-  <nav id="navbar">
-  <div class="nav-logo">
-    <img src="images/logo.png" alt="Prem Jha Logo" />
-    <span>Prem<span class="dot">.</span>Jha</span>
-  </div>
-  <ul class="nav-links">
-    <li class="nav-close" id="nav-close">&times;</li>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-toggle" id="nav-toggle">
-    <span></span><span></span><span></span>
-  </div>
-</nav>
 
   <!-- ===================== SPLASH SCREEN ===================== -->
   <section id="splash-screen">
@@ -51,8 +35,26 @@
   </section>
   <!-- =================== END SPLASH SCREEN ==================== -->
 
+
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span>Prem<span class="dot">.</span>Jha</span>
+    </div>
+    <ul class="nav-links">
+      <li class="nav-close" id="nav-close">&times;</li>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-toggle" id="nav-toggle">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
   <!-- ===================== HERO SECTION ===================== -->
   <section id="hero">
+    <canvas id="particles-canvas"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-greeting">&lt;/&gt; Namaste, I'm</p>
@@ -64,11 +66,16 @@
         <a href="#contact" class="btn-secondary">Contact me</a>
       </div>
     </div>
+    <div class="hero-curve">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,40 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#f4ead8"></path>
+      </svg>
+    </div>
   </section>
 
   <!-- =================== ABOUT SECTION ==================== -->
   <section id="about">
-  <div class="about-container">
+  <div class="about-container reveal">
     <div class="about-image">
       <img src="about.png" alt="Prem Jha" />
     </div>
@@ -86,11 +93,16 @@
       </div>
     </div>
   </div>
+  <div class="section-curve">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,50 C480,120 960,-20 1440,50 L1440,100 L0,100 Z" fill="#ede3cf"></path>
+    </svg>
+  </div>
 </section>
 
 <!-- =================== SKILLS SECTION ==================== -->
 <section id="skills">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <h2>Skills</h2>
   </div>
   <div class="marquee">
@@ -109,12 +121,17 @@
       <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span>Node.js</span></div>
     </div>
   </div>
+  <div class="section-curve">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,30 C360,-10 1080,110 1440,30 L1440,100 L0,100 Z" fill="#e3d9c6"></path>
+    </svg>
+  </div>
 </section>
 
 <!-- Tools Section -->
 
 <section id="tools">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <h2>Tools</h2>
   </div>
   <div class="marquee marquee-reverse">
@@ -133,17 +150,22 @@
       <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" /><span>npm</span></div>
     </div>
   </div>
+  <div class="section-curve">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,60 C400,10 1040,90 1440,40 L1440,100 L0,100 Z" fill="#f6f1e4"></path>
+    </svg>
+  </div>
 </section>
 
 <!-- ==================== PROJECTS SECTION ==================== -->
 <section id="projects">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <!-- <p class="section-tag">&lt;/&gt; My work</p> -->
     <h2>Projects</h2>
     <p class="section-subtitle">A few things I've built recently.</p>
 
     <div class="projects-grid">
-      <div class="project-card">
+      <div class="project-card reveal">
         <div class="project-image">
           <img src="images/sabin.png" alt="Project 1" />
         </div>
@@ -160,7 +182,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card reveal">
         <div class="project-image">
           <img src="images/hajiri-sahayog.png" alt="Project 2" />
         </div>
@@ -177,7 +199,7 @@
         </div>
       </div>
 
-      <div class="project-card">
+      <div class="project-card reveal">
         <div class="project-image">
           <img src="images/mjss.png" alt="Project 3" />
         </div>
@@ -195,12 +217,17 @@
       </div>
     </div>
   </div>
+  <div class="section-curve">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,50 C480,120 960,-20 1440,50 L1440,100 L0,100 Z" fill="#e6d5c3"></path>
+    </svg>
+  </div>
 </section>
 
 
 <!-- CONTACT SECTION -->
 <section id="contact">
-  <div class="section-inner">
+  <div class="section-inner reveal">
     <!-- <p class="section-tag">&lt;/&gt; Get in touch</p> -->
     <h2>Get in Touch</h2>
     <p class="section-subtitle">Have a project in mind or just want to say hi? Reach out below.</p>
@@ -234,6 +261,11 @@
       </div>
     </div>
   </div>
+  <div class="section-curve">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path d="M0,30 C360,-10 1080,110 1440,30 L1440,100 L0,100 Z" fill="#0e1626"></path>
+    </svg>
+  </div>
 </section>
 
 
@@ -242,8 +274,11 @@
 </footer>
 
 
+
   <script src="js/splash.js"></script>
   <script src="js/navbar.js"></script>
   <script src="js/footer.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/scroll-reveal.js"></script>
 </body>
 </html>
