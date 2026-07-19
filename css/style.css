@@ -1,0 +1,244 @@
+/* ============================================
+   TOKENS
+   ============================================ */
+:root {
+  --paper: #E4E8DE;
+  --panel: #EFF2EA;
+  --ink: #1F3D3B;
+  --ink-soft: #62766F;
+  --muted: #9AAAA2;
+  --accent: #B33A3A;
+  --bar: #1F3D3B;
+
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6vh 5vw;
+  font-family: var(--font-mono);
+  color: var(--ink);
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--ink-soft);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   TERMINAL WINDOW
+   ============================================ */
+.terminal {
+  width: min(520px, 94vw);
+  background: var(--panel);
+  border: 1px solid var(--ink);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: rise-in 0.45s ease 0.05s forwards;
+}
+
+@keyframes rise-in {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.terminal__bar {
+  background: var(--bar);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+}
+
+.terminal__dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot--a { background: var(--accent); }
+.dot--b { background: #C9A227; }
+.dot--c { background: #6C8F6A; }
+
+.terminal__file {
+  flex: 1;
+  text-align: center;
+  font-size: 0.74rem;
+  color: var(--paper);
+  opacity: 0.75;
+  letter-spacing: 0.02em;
+}
+
+.terminal__spacer {
+  width: 48px;
+}
+
+.terminal__body {
+  padding: clamp(20px, 5vw, 32px);
+}
+
+/* ============================================
+   MARKDOWN-STYLE CONTENT
+   ============================================ */
+.portrait {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(0.3);
+  margin-bottom: 16px;
+}
+
+.tok {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.md-h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.md-h1 .tok {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.md-code {
+  display: inline-block;
+  font-size: 0.82rem;
+  background: var(--paper);
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.badge {
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--ink-soft);
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--ink-soft);
+}
+
+.md-h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 22px 0 8px;
+}
+
+.md-h2 .tok {
+  margin-right: 8px;
+}
+
+.md-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+}
+
+.md-list .tok {
+  margin-right: 6px;
+}
+
+.md-hr {
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin: 26px 0 14px;
+  font-size: 0.8rem;
+}
+
+.md-quote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.credit {
+  border: none;
+  background: none;
+  font: inherit;
+  font-style: italic;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 1px dashed var(--ink-soft);
+}
+
+.credit:hover,
+.credit:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.cursor {
+  width: 7px;
+  height: 14px;
+  background: var(--ink-soft);
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 420px) {
+  .md-h1 { font-size: 1.5rem; }
+}

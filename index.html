@@ -3,291 +3,398 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prem Jha | Code. Create. Conquer.</title>
-  <link rel="icon" type="image/png" href="images/logo.png" />
+  <title>Prem Jha — Full-Stack Developer</title>
+  <meta name="description" content="Prem Jha, full-stack developer from Nepal. Web & mobile apps, projects, and contact." />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
-  <!-- Splash screen styles -->
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/splash.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/nav.css" />
   <link rel="stylesheet" href="css/hero.css" />
   <link rel="stylesheet" href="css/about.css" />
-  <link rel="stylesheet" href="css/sections.css" />
-  <link rel="stylesheet" href="css/skills-tools.css" />
-  <link rel="stylesheet" href="css/effects.css" />
+  <link rel="stylesheet" href="css/skills.css" />
+  <link rel="stylesheet" href="css/projects.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 </head>
 <body>
 
-  <!-- ===================== SPLASH SCREEN ===================== -->
-  <section id="splash-screen">
-    <div class="splash-glow"></div>
+  <!-- ================= SPLASH ================= -->
+  <div class="splash" id="splash" aria-hidden="true">
+    <span class="splash__logo">Prem Jha</span>
+  </div>
 
-    <div class="splash-content">
-      <img src="images/logo.png" alt="Prem Jha Logo" class="splash-logo" />
-      <h1 class="splash-name">
-        <span class="letter">P</span><span class="letter">r</span><span class="letter">e</span><span class="letter">m</span>
-        <span class="letter">&nbsp;</span>
-        <span class="letter">J</span><span class="letter">h</span><span class="letter">a</span>
-      </h1>
-      <p class="splash-tagline"><span id="typed-text"></span><span class="cursor">|</span></p>
-    </div>
-  </section>
-  <!-- =================== END SPLASH SCREEN ==================== -->
+  <!-- ================= NAV ================= -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">Prem Jha</a>
 
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
 
-  <nav id="navbar">
-    <div class="nav-logo">
-      <span>Prem<span class="dot">.</span>Jha</span>
-    </div>
-    <ul class="nav-links">
-      <li class="nav-close" id="nav-close">&times;</li>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="nav-toggle" id="nav-toggle">
-      <span></span><span></span><span></span>
+      <div class="nav__links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <!-- ===================== HERO SECTION ===================== -->
-  <section id="hero">
-    <canvas id="particles-canvas"></canvas>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-greeting">&lt;/&gt; Namaste, I'm</p>
-      <h1 class="hero-name">Prem Jha</h1>
-      <p class="hero-role">Full-Stack Developer</p>
-      <p class="hero-desc">I build clean, functional web experiences from the ground up, blending solid code with a bit of creative edge.</p>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary">View my work</a>
-        <a href="#contact" class="btn-secondary">Contact me</a>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+
+      <div class="hero__text">
+        <p class="hero__eyebrow">Hello, I'm <span class="wave">👋</span></p>
+        <h1 class="hero__name">Prem Jha</h1>
+        <h2 class="hero__role">Full-Stack Developer</h2>
+        <p class="hero__desc">
+          I build beautiful, fast and functional web applications
+          and mobile apps with modern technologies.
+          I love turning ideas into real products.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View My Work <span class="arrow">→</span></a>
+          <a href="#" class="btn btn--outline" id="downloadCv">Download CV <span class="icon-down">⬇</span></a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__icon">⏱</span>
+            <span class="stat__num">1+</span>
+            <span class="stat__label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__icon">📁</span>
+            <span class="stat__num">10+</span>
+            <span class="stat__label">Projects Completed</span>
+          </div>
+          <div class="stat">
+            <span class="stat__icon">🛠</span>
+            <span class="stat__num">5+</span>
+            <span class="stat__label">Technologies</span>
+          </div>
+          <div class="stat">
+            <span class="stat__icon">🤝</span>
+            <span class="stat__num">100%</span>
+            <span class="stat__label">Client Satisfaction</span>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="hero-curve">
-      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-        <path d="M0,40 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#f4ead8"></path>
-      </svg>
+
+      <div class="hero__art" aria-hidden="true">
+        <div class="hero__glow"></div>
+        <svg viewBox="0 0 520 460" class="hero__svg">
+
+          <!-- floating tech badges -->
+          <g class="badge badge--react">
+            <circle cx="60" cy="70" r="26" fill="url(#gReact)" opacity="0.15"/>
+            <g stroke="#7DD3FC" stroke-width="2.4" fill="none">
+              <ellipse cx="60" cy="70" rx="20" ry="8"/>
+              <ellipse cx="60" cy="70" rx="20" ry="8" transform="rotate(60 60 70)"/>
+              <ellipse cx="60" cy="70" rx="20" ry="8" transform="rotate(120 60 70)"/>
+            </g>
+            <circle cx="60" cy="70" r="3.5" fill="#7DD3FC"/>
+          </g>
+
+          <g class="badge badge--code">
+            <rect x="220" y="18" width="80" height="44" rx="12" fill="#151B2E" stroke="#8B5CF6" stroke-width="1.5"/>
+            <text x="260" y="47" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="22" fill="#C4B5FD">&lt;/&gt;</text>
+          </g>
+
+          <g class="badge badge--js">
+            <rect x="430" y="90" width="46" height="46" rx="11" fill="#F7DF1E" opacity="0.92"/>
+            <text x="453" y="120" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#1a1a1a">JS</text>
+          </g>
+
+          <g class="badge badge--flutter">
+            <rect x="440" y="200" width="42" height="42" rx="10" fill="#151B2E" stroke="#38BDF8" stroke-width="1.5"/>
+            <path d="M448 232 L462 210 L472 210 L458 232 Z" fill="#38BDF8"/>
+            <path d="M458 232 L472 232 L465 221 Z" fill="#0EA5E9"/>
+          </g>
+
+          <!-- desk scene -->
+          <g class="desk-scene">
+            <rect x="70" y="330" width="380" height="14" rx="4" fill="#1B2338"/>
+            <rect x="90" y="344" width="10" height="60" fill="#12182A"/>
+            <rect x="420" y="344" width="10" height="60" fill="#12182A"/>
+
+            <!-- monitors -->
+            <g>
+              <rect x="140" y="200" width="110" height="80" rx="6" fill="#0D1220" stroke="#2A3450" stroke-width="2"/>
+              <rect x="150" y="210" width="90" height="6" fill="#38BDF8" opacity="0.8"/>
+              <rect x="150" y="222" width="60" height="5" fill="#8B5CF6" opacity="0.7"/>
+              <rect x="150" y="232" width="75" height="5" fill="#38BDF8" opacity="0.5"/>
+              <rect x="150" y="242" width="50" height="5" fill="#8B5CF6" opacity="0.6"/>
+              <rect x="185" y="280" width="20" height="12" fill="#2A3450"/>
+            </g>
+
+            <g>
+              <rect x="270" y="190" width="120" height="88" rx="6" fill="#0D1220" stroke="#2A3450" stroke-width="2"/>
+              <rect x="280" y="200" width="95" height="6" fill="#8B5CF6" opacity="0.8"/>
+              <rect x="280" y="212" width="70" height="5" fill="#38BDF8" opacity="0.6"/>
+              <rect x="280" y="222" width="85" height="5" fill="#8B5CF6" opacity="0.5"/>
+              <rect x="280" y="232" width="55" height="5" fill="#38BDF8" opacity="0.7"/>
+              <rect x="320" y="278" width="20" height="12" fill="#2A3450"/>
+            </g>
+
+            <!-- laptop -->
+            <g>
+              <rect x="360" y="290" width="70" height="46" rx="4" fill="#0D1220" stroke="#2A3450" stroke-width="1.5"/>
+              <rect x="366" y="296" width="58" height="34" fill="#151B2E"/>
+              <rect x="371" y="302" width="40" height="4" fill="#38BDF8" opacity="0.6"/>
+              <rect x="371" y="310" width="28" height="4" fill="#8B5CF6" opacity="0.6"/>
+            </g>
+
+            <!-- person silhouette -->
+            <g>
+              <ellipse cx="252" cy="300" rx="46" ry="52" fill="#12182A"/>
+              <circle cx="252" cy="238" r="26" fill="#1B2338"/>
+              <path d="M228 232 Q252 200 276 232 Q276 218 252 214 Q228 218 228 232 Z" fill="#0B0F1D"/>
+            </g>
+
+            <!-- desk lamp -->
+            <g stroke="#C9A227" stroke-width="2" fill="none">
+              <line x1="420" y1="335" x2="420" y2="300"/>
+              <line x1="420" y1="300" x2="450" y2="280"/>
+            </g>
+            <circle cx="452" cy="277" r="8" fill="#FFD166" opacity="0.9"/>
+
+            <!-- mug + plant -->
+            <rect x="330" y="315" width="16" height="18" rx="2" fill="#8B5CF6" opacity="0.7"/>
+            <g>
+              <rect x="120" y="300" width="20" height="18" rx="2" fill="#5B4636"/>
+              <path d="M130 300 Q118 280 128 265 M130 300 Q142 285 136 268 M130 300 Q130 275 130 260" stroke="#4ADE80" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </g>
+          </g>
+
+          <defs>
+            <radialGradient id="gReact" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#7DD3FC"/>
+              <stop offset="100%" stop-color="#7DD3FC" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+        </svg>
+      </div>
+
     </div>
   </section>
 
-  <!-- =================== ABOUT SECTION ==================== -->
-  <section id="about">
-  <div class="about-container reveal">
-    <div class="about-image">
-      <img src="about.png" alt="Prem Jha" />
-    </div>
-    <div class="about-text">
-      <!-- <p class="section-tag">&lt;/&gt; About me</p> -->
-      <h2>Hey, I'm Prem</h2>
-      <p class="about-snippet">
-        I'm a developer who enjoys turning ideas into clean, working code.
-        From frontend interfaces to backend logic, I like building things
-        that feel solid and look good doing it.
-      </p>
-      <div class="about-links">
-        <a href="https://github.com/mynameisprem-pj" target="_blank" class="btn-primary">View my GitHub</a>
-        <!-- <a href="https://github.com/mynameisprem-pj" target="_blank" class="about-handle">@mynameisprem-pj</a> -->
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
+    <h2 class="section-title"><span class="bar"></span>About Me</h2>
+
+    <div class="about__grid">
+      <div class="about__photo">
+        <img src="assets/portrait.png" alt="Prem Jha" />
       </div>
-    </div>
-  </div>
-  <div class="section-curve">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,50 C480,120 960,-20 1440,50 L1440,100 L0,100 Z" fill="#ede3cf"></path>
-    </svg>
-  </div>
-</section>
 
-<!-- =================== SKILLS SECTION ==================== -->
-<section id="skills">
-  <div class="section-inner reveal">
-    <h2>Skills</h2>
-  </div>
-  <div class="marquee">
-    <div class="marquee-track">
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /><span>HTML5</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /><span>CSS3</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><span>JavaScript</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><span>Python</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /><span>React</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span>Node.js</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /><span>HTML5</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /><span>CSS3</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /><span>JavaScript</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><span>Python</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" /><span>React</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span>Node.js</span></div>
-    </div>
-  </div>
-  <div class="section-curve">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,30 C360,-10 1080,110 1440,30 L1440,100 L0,100 Z" fill="#e3d9c6"></path>
-    </svg>
-  </div>
-</section>
-
-<!-- Tools Section -->
-
-<section id="tools">
-  <div class="section-inner reveal">
-    <h2>Tools</h2>
-  </div>
-  <div class="marquee marquee-reverse">
-    <div class="marquee-track">
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" /><span>VS Code</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /><span>Git</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /><span>GitHub</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /><span>Figma</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /><span>Docker</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" /><span>npm</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" /><span>VS Code</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" /><span>Git</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" /><span>GitHub</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" /><span>Figma</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" /><span>Docker</span></div>
-      <div class="marquee-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" alt="npm" /><span>npm</span></div>
-    </div>
-  </div>
-  <div class="section-curve">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,60 C400,10 1040,90 1440,40 L1440,100 L0,100 Z" fill="#f6f1e4"></path>
-    </svg>
-  </div>
-</section>
-
-<!-- ==================== PROJECTS SECTION ==================== -->
-<section id="projects">
-  <div class="section-inner reveal">
-    <!-- <p class="section-tag">&lt;/&gt; My work</p> -->
-    <h2>Projects</h2>
-    <p class="section-subtitle">A few things I've built recently.</p>
- 
-    <div class="projects-grid">
-      <div class="project-card reveal">
-        <div class="project-browser-bar">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="project-image">
-          <img src="images/sabin.png" alt="Project 1" />
-        </div>
-        <div class="project-info">
-          <h3>Sabin's Website</h3>
-          <p>Personal portfolio with smooth animations and a clean, minimal layout.</p>
-          <div class="project-tech">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          <div class="project-links">
-            <a href="https://sabindesigns.vercel.app" class="btn-secondary" target="_blank">Live demo</a>
-            <!-- <a href="#" class="btn-secondary" target="_blank">GitHub</a> -->
-          </div>
-        </div>
+      <div class="about__bio">
+        <p>I'm a passionate <strong>Full-Stack Developer</strong> from Nepal.</p>
+        <p>I enjoy building scalable, user-friendly web and mobile applications. I focus on writing clean code, solving problems and learning new technologies.</p>
+        <p>When I'm not coding, I love exploring new tech, reading books and creating content.</p>
+        <p class="signature">Prem Jha</p>
       </div>
- 
-      <div class="project-card reveal">
-        <div class="project-browser-bar">
-          <span></span><span></span><span></span>
+
+      <div class="about__info">
+        <div class="info-row">
+          <span class="info-icon">👤</span>
+          <div><span class="info-label">Name:</span><span class="info-value">Prem Jha</span></div>
         </div>
-        <div class="project-image">
-          <img src="images/hajiri-sahayog.png" alt="Project 2" />
+        <div class="info-row">
+          <span class="info-icon">📍</span>
+          <div><span class="info-label">Location:</span><span class="info-value">Sarlahi District, Nepal</span></div>
         </div>
-        <div class="project-info">
-          <h3>Hajiri Sahayog</h3>
-          <p>Offline-capable PWA for teachers to log and track daily attendance.</p>
-          <div class="project-tech">
-            <span>Html</span><span>Css</span><span>JS</span>
-          </div>
-          <div class="project-links">
-            <a href="https://hajiri-sahayog.vercel.app" class="btn-secondary" target="_blank">Live demo</a>
-            <a href="https://github.com/mynameisprem-pj/hajiri-sahayog" class="btn-secondary" target="_blank">GitHub</a>
-          </div>
+        <div class="info-row">
+          <span class="info-icon">✉️</span>
+          <div><span class="info-label">Email:</span><span class="info-value">premjha.dev@gmail.com</span></div>
         </div>
-      </div>
- 
-      <div class="project-card reveal">
-        <div class="project-browser-bar">
-          <span></span><span></span><span></span>
+        <div class="info-row">
+          <span class="info-icon">📞</span>
+          <div><span class="info-label">Phone:</span><span class="info-value">+977 986-1234567</span></div>
         </div>
-        <div class="project-image">
-          <img src="images/mjss.png" alt="Project 3" />
-        </div>
-        <div class="project-info">
-          <h3>MJSS Website</h3>
-          <p>School website with admissions info, notices, and a responsive layout.</p>
-          <div class="project-tech">
-            <span>html</span><span>Css & Js</span>
-          </div>
-          <div class="project-links">
-            <a href="https://mahadev-school.vercel.app" class="btn-secondary" target="_blank">Live demo</a>
-            <!-- <a href="#" class="btn-secondary" target="_blank">GitHub</a> -->
-          </div>
+        <div class="info-row">
+          <span class="info-icon">🟢</span>
+          <div><span class="info-label">Freelance:</span><span class="info-value info-value--available">Available</span></div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="section-curve">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,50 C480,120 960,-20 1440,50 L1440,100 L0,100 Z" fill="#e6d5c3"></path>
-    </svg>
-  </div>
-</section>
+  </section>
 
+  <!-- ================= SKILLS ================= -->
+  <section class="skills" id="skills">
+    <h2 class="section-title"><span class="bar"></span>My Skills</h2>
 
-<!-- CONTACT SECTION -->
-<section id="contact">
-  <div class="section-inner reveal">
-    <!-- <p class="section-tag">&lt;/&gt; Get in touch</p> -->
-    <h2>Get in Touch</h2>
-    <p class="section-subtitle">Have a project in mind or just want to say hi? Reach out below.</p>
+    <div class="skills__grid">
+      <div class="skill-card">
+        <span class="skill-card__icon skill-card__icon--frontend">&lt;/&gt;</span>
+        <h3 class="skill-card__title skill-card__title--frontend">Frontend</h3>
+        <p class="skill-card__list">React, Tailwind CSS, JavaScript, TypeScript, HTML, CSS</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon skill-card__icon--backend">🗄</span>
+        <h3 class="skill-card__title skill-card__title--backend">Backend</h3>
+        <p class="skill-card__list">Node.js, Express.js, Python, MySQL, REST APIs</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon skill-card__icon--mobile">📱</span>
+        <h3 class="skill-card__title skill-card__title--mobile">Mobile</h3>
+        <p class="skill-card__list">Flutter, Dart, Cross-platform App Development</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon skill-card__icon--database">🗃</span>
+        <h3 class="skill-card__title skill-card__title--database">Database</h3>
+        <p class="skill-card__list">MySQL, Firebase, Google Sheets API, IndexedDB</p>
+      </div>
+      <div class="skill-card">
+        <span class="skill-card__icon skill-card__icon--tools">🛠</span>
+        <h3 class="skill-card__title skill-card__title--tools">Tools</h3>
+        <p class="skill-card__list">Git, GitHub, VS Code, Postman, Netlify, Vercel</p>
+      </div>
+    </div>
+  </section>
 
-    <div class="contact-columns">
-      <div class="contact-details">
-        <div class="contact-item">
-          <i class="ti ti-map-pin"></i>
-          <span>Harion - 10, Sarlahi</span>
+  <!-- ================= PROJECTS ================= -->
+  <section class="projects" id="projects">
+    <h2 class="section-title"><span class="bar"></span>Featured Projects</h2>
+
+    <div class="projects__grid">
+
+      <article class="project-card">
+        <div class="project-card__thumb project-card__thumb--dashboard" aria-hidden="true">
+          <div class="mock-window">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mock-chart">
+            <div class="bar1"></div><div class="bar2"></div><div class="bar3"></div><div class="bar4"></div><div class="bar5"></div>
+          </div>
         </div>
-        <div class="contact-item">
-          <i class="ti ti-mail"></i>
-          <a href="mailto:premjha1714@gmail.com">premjha1714@gmail.com</a>
+        <div class="project-card__body">
+          <div class="project-card__head">
+            <h3>Hajiri Sahayog</h3>
+            <span class="badge-tag badge-tag--green">PWA</span>
+          </div>
+          <p>Offline attendance tracking system for schools with leave management, holiday calendar and data export/import.</p>
+          <div class="project-card__tags">
+            <span>⚛ React</span><span>📦 Dexie.js</span><span>📲 PWA</span>
+          </div>
         </div>
-        <a href="https://wa.me/9702080028" target="_blank" class="whatsapp-btn">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/whatsapp.svg" alt="WhatsApp" />
-          Chat on WhatsApp
+        <a href="#" class="project-card__link" aria-label="Open Hajiri Sahayog project">↗</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-card__thumb project-card__thumb--phone" aria-hidden="true">
+          <div class="mock-phone">
+            <span class="row"></span><span class="row"></span><span class="row short"></span>
+          </div>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__head">
+            <h3>Pasal Sahayog</h3>
+            <span class="badge-tag badge-tag--blue">Desktop App</span>
+          </div>
+          <p>Offline stock management software for local shops with inventory, sales and reporting.</p>
+          <div class="project-card__tags">
+            <span>🐍 Python</span><span>🗄 SQLite</span><span>🖥 Tkinter</span>
+          </div>
+        </div>
+        <a href="#" class="project-card__link" aria-label="Open Pasal Sahayog project">↗</a>
+      </article>
+
+      <article class="project-card project-card--icon">
+        <div class="project-card__thumb project-card__thumb--icon" aria-hidden="true">
+          <span class="icon-orb">⚡</span>
+          <h3 class="icon-title">SmartSortAI</h3>
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__head">
+            <h3>SmartSortAI</h3>
+            <span class="badge-tag badge-tag--purple">Python App</span>
+          </div>
+          <p>AI-powered file organizer that sorts, finds duplicates and cleans junk files smartly with one click.</p>
+          <div class="project-card__tags">
+            <span>🐍 Python</span><span>🤖 AI</span><span>⚙️ Automation</span>
+          </div>
+        </div>
+        <a href="#" class="project-card__link" aria-label="Open SmartSortAI project">↗</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="contact__grid">
+
+      <div class="contact__left">
+        <h2 class="section-title"><span class="bar"></span>Get In Touch</h2>
+        <p class="contact__intro">Have a project in mind or want to work together? Feel free to reach out to me.</p>
+
+        <a href="mailto:premjha.dev@gmail.com" class="contact-chip">
+          <span class="contact-chip__icon">✉️</span> premjha.dev@gmail.com
         </a>
+        <a href="tel:+9779861234567" class="contact-chip">
+          <span class="contact-chip__icon">📞</span> +977 986-1234567
+        </a>
+        <p class="contact-chip contact-chip--static">
+          <span class="contact-chip__icon">📍</span> Sarlahi District, Nepal
+        </p>
       </div>
 
-      <div class="contact-social">
-        <a href="https://github.com/mynameisprem-pj" target="_blank" aria-label="GitHub">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61590339523334" target="_blank" aria-label="Facebook">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook" />
-        </a>
-        <a href="https://instagram.com/premz_ha/" target="_blank" aria-label="Instagram">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram" />
-        </a>
+      <form class="contact__form" id="contactForm" novalidate>
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+        </div>
+        <input type="text" name="subject" placeholder="Subject" required />
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn--primary btn--full">Send Message <span class="arrow">➤</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact__right">
+        <h2 class="section-title"><span class="bar"></span>Connect With Me</h2>
+        <ul class="connect-list">
+          <li>
+            <span class="connect-icon connect-icon--github">🐙</span>
+            <div><strong>GitHub</strong><a href="https://github.com/premjha-dev" target="_blank" rel="noopener noreferrer">github.com/premjha-dev</a></div>
+          </li>
+          <li>
+            <span class="connect-icon connect-icon--linkedin">in</span>
+            <div><strong>LinkedIn</strong><a href="https://linkedin.com/in/premjha" target="_blank" rel="noopener noreferrer">linkedin.com/in/premjha</a></div>
+          </li>
+          <li>
+            <span class="connect-icon connect-icon--youtube">▶</span>
+            <div><strong>YouTube</strong><a href="https://youtube.com/@developwithai" target="_blank" rel="noopener noreferrer">youtube.com/@developwithai</a></div>
+          </li>
+          <li>
+            <span class="connect-icon connect-icon--instagram">📷</span>
+            <div><strong>Instagram</strong><a href="https://instagram.com/premjha.dev" target="_blank" rel="noopener noreferrer">instagram.com/premjha.dev</a></div>
+          </li>
+        </ul>
       </div>
+
     </div>
-  </div>
-  <div class="section-curve">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path d="M0,30 C360,-10 1080,110 1440,30 L1440,100 L0,100 Z" fill="#0e1626"></path>
-    </svg>
-  </div>
-</section>
+  </section>
 
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <a href="#hero" class="footer__logo">Prem Jha</a>
+    <p><span class="heart">♥</span> Thanks for visiting! © 2025 Prem Jha. All rights reserved.</p>
+  </footer>
 
-<footer id="footer">
-  <p>&copy; <span id="year"></span> Prem Jha. Built with code and curiosity.</p>
-</footer>
-
-
-  <script src="js/card-expand.js"></script>
   <script src="js/splash.js"></script>
-  <script src="js/navbar.js"></script>
-  <script src="js/footer.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/scroll-reveal.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>

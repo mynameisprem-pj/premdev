@@ -1,118 +1,77 @@
-/* =====================================================
-   ABOUT TEASER SECTION (index.html)
-   Image + short intro + "know me deeper" CTA
-===================================================== */
+.about__grid {
+  display: grid;
+  grid-template-columns: 220px 1fr 260px;
+  gap: 40px;
+  align-items: start;
+}
 
-#about {
+.about__photo img {
   width: 100%;
-  min-height: 100vh;
-  background: #f4ead8;
-  display: flex;
-  align-items: center;
-  padding: 100px 60px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
 }
 
-.about-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 60px;
+.about__bio p {
+  color: var(--text-soft);
+  margin-bottom: 14px;
 }
 
-.about-image {
-  flex: 0 0 320px;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(27, 42, 74, 0.15);
-  border: 1px solid rgba(27, 42, 74, 0.1);
+.about__bio strong {
+  color: var(--purple-light);
+  font-weight: 600;
 }
 
-.about-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+.signature {
+  font-family: var(--font-script);
+  font-size: 1.9rem;
+  color: var(--purple-light);
+  margin-top: 10px;
 }
 
-.about-text {
-  flex: 1;
+.about__info {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-
-.section-tag {
-  color: #e8a849;
-  font-family: 'Courier New', monospace;
-  font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
-.about-text h2 {
-  color: #1b2a4a;
-  font-size: 2.4rem;
-  font-weight: 600;
-  margin: 0;
-}
-
-.about-snippet {
-  color: rgba(27, 42, 74, 0.65);
-  font-size: 1.05rem;
-  line-height: 1.8;
-  margin: 0;
-  max-width: 480px;
-}
-
-.about-text .btn-primary {
-  display: inline-block;
-  margin-top: 12px;
-  width: fit-content;
-}
-
-.about-links {
-  display: flex;
-  align-items: center;
   gap: 18px;
-  margin-top: 12px;
-  flex-wrap: wrap;
 }
 
-.about-handle {
-  color: #d9622b;
-  font-family: 'Courier New', monospace;
+.info-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
   font-size: 0.9rem;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.25s ease;
 }
 
-.about-handle:hover {
-  border-color: #d9622b;
+.info-icon {
+  flex-shrink: 0;
 }
 
-/* ===================== RESPONSIVE ===================== */
-@media (max-width: 768px) {
-  #about {
-    padding: 80px 28px;
-  }
+.info-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
 
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 36px;
-  }
+.info-label {
+  color: var(--text-faint);
+  font-size: 0.75rem;
+}
 
-  .about-image {
-    flex: 0 0 auto;
-    max-width: 260px;
-  }
+.info-value {
+  color: var(--text);
+}
 
-  .about-text {
-    align-items: center;
-  }
+.info-value--available {
+  color: var(--green);
+  font-weight: 600;
+}
 
-  .about-text h2 {
-    font-size: 2rem;
+@media (max-width: 880px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+  .about__photo {
+    width: 160px;
   }
 }

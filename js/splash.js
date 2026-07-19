@@ -1,37 +1,31 @@
-// =====================================================
-// SPLASH SCREEN LOGIC
-// Waits for the entry animation to finish, then fades
-// the splash screen out and reveals the main site.
-// =====================================================
+// Shows the splash screen for a minimum time (so it doesn't just flicker
+// on fast connections), then fades it out once the page has loaded.
+(() => {
+  const splash = document.getElementById('splash');
+  if (!splash) return;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const splash = document.getElementById("splash-screen");
-  const mainContent = document.getElementById("main-content");
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const MIN_DISPLAY_MS = prefersReducedMotion ? 0 : 700;
+  const started = Date.now();
 
-  const SPLASH_DURATION = 3500; // total time (ms) splash stays visible
-  const taglineText = "</> Welcome to my world";
-let charIndex = 0;
-const typedEl = document.getElementById("typed-text");
+  document.documentElement.classList.add('no-scroll');
 
-function typeTagline() {
-  if (charIndex < taglineText.length) {
-    typedEl.textContent += taglineText.charAt(charIndex);
-    charIndex++;
-    setTimeout(typeTagline, 70);
-  }
-}
+  function hideSplash() {
+    const elapsed = Date.now() - started;
+    const wait = Math.max(0, MIN_DISPLAY_MS - elapsed);
 
-setTimeout(typeTagline, 1500); // starts typing after name finishes animating// total time (ms) splash stays visible
-
-  setTimeout(() => {
-    splash.classList.add("hide");
-
-    // once the fade-out transition finishes, remove splash from DOM
-    // and reveal the real site content
     setTimeout(() => {
-      splash.style.display = "none";
-      mainContent.style.display = "block";
-    }, 800); // matches the CSS transition time
+      splash.classList.add('splash--hidden');
+      document.documentElement.classList.remove('no-scroll');
+      setTimeout(() => splash.remove(), 500);
+    }, wait);
+  }
 
-  }, SPLASH_DURATION);
-});
+  if (document.readyState === 'complete') {
+    hideSplash();
+  } else {
+    window.addEventListener('load', hideSplash);
+    // Safety net in case 'load' is delayed by slow external resources.
+    setTimeout(hideSplash, 2500);
+  }
+})();

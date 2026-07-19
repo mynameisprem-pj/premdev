@@ -1,0 +1,36 @@
+:root {
+  /* Backgrounds */
+  --bg: #0A0E1A;
+  --bg-alt: #0C1122;
+  --panel: #121729;
+  --panel-alt: #151B2E;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+
+  /* Text */
+  --text: #F1F3F9;
+  --text-soft: #A6ADC3;
+  --text-faint: #6B7284;
+
+  /* Accents */
+  --purple: #8B5CF6;
+  --purple-light: #C4B5FD;
+  --blue: #3B82F6;
+  --cyan: #38BDF8;
+  --green: #34D399;
+  --gold: #F7DF1E;
+
+  --gradient-primary: linear-gradient(90deg, #8B5CF6, #3B82F6);
+  --gradient-text: linear-gradient(90deg, #A78BFA, #60A5FA);
+  --gradient-role: linear-gradient(90deg, #38BDF8, #A78BFA);
+
+  /* Type */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-script: 'Caveat', cursive;
+
+  /* Layout */
+  --max-width: 1120px;
+  --radius: 14px;
+  --radius-sm: 8px;
+}
